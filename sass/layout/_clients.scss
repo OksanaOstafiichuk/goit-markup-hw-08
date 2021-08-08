@@ -1,5 +1,7 @@
 .client-list {
-  @include flex-list;
+  @media screen and (min-width: 480px) {
+    @include flex-list;
+  }
 }
 
 .client-list__item {
@@ -13,6 +15,12 @@
 
   @media screen and (min-width: 1200px) {
     @include flex-item(calc(100% / 6 - var(--set-gap)));
+  }
+}
+
+.client-list__item:not(last-child) {
+  @media screen and (max-width: 479px) {
+    margin-bottom: 20px;
   }
 }
 

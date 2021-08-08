@@ -1,0 +1,113 @@
+.mobile-menu {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+  z-index: 100;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 500ms var(--function-transition), visibility 500ms var(--function-transition);
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.container-mobile {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 40px;
+  height: 100%;
+  width: 100%;
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-btn {
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border: transparent;
+  cursor: pointer;
+}
+
+.mobile-menu-list__item:not(:last-child),
+.mobile-contact-list__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu-list__link {
+  font-family: Roboto;
+  @include font($fs: 40px, $fw: 500, $lh: 47px);
+  letter-spacing: 0.02em;
+
+  color: var (--text-color);
+}
+
+.mobile-list__link--active {
+  color: var(--accent-color);
+}
+
+.mobile-contact-list {
+  margin-top: auto;
+}
+
+.mobile-contact-list__link {
+  font-family: Roboto;
+  letter-spacing: 0.02em;
+}
+
+.tel {
+  @include font($fs: 8vw, $fw: 500, $lh: 40px);
+
+  color: var(--accent-color);
+}
+
+.mail {
+  @include font($fs: 24px, $fw: 500, $lh: 28px);
+
+  color: var(--secondary-text-color);
+}
+
+.mobile-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 64px;
+}
+
+.mobile-social-list__item:not(:last-child):after {
+  content: '';
+  width: 22px;
+  height: 0px;
+
+  margin-right: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+}
+
+.mobile-social-list__link {
+  padding-right: 10px;
+
+  font-family: Roboto;
+  @include font($fs: 18px, $fw: 500, $lh: 22px);
+
+  letter-spacing: 0.02em;
+
+  color: var(--accent-color);
+}

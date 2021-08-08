@@ -76,11 +76,15 @@
 
 .modal-form-checkbox-label {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin-bottom: var(--set-gap);
 
-  line-height: 1.71;
+  font-size: 10px;
+  line-height: 1.167;
+
+  // line-height: 1.71;
   text-align: center;
   color: var(--secondary-text-color);
 
@@ -96,12 +100,14 @@
     cursor: pointer;
 
     .modal-form-checkbox:checked + & {
-      background-image: url(../images/icons/icon-check.svg);
-      background-color: var(--accent-color);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-origin: border-box;
+      background: {
+        image: url(../images/icons/icon-check.svg);
+        color: var(--accent-color);
+        size: contain;
+        position: center;
+        repeat: no-repeat;
+        origin: border-box;
+      }
       border-color: transparent;
     }
 

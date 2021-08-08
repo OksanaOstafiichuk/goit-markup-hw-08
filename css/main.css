@@ -113,26 +113,26 @@ body {
   }
 }
 
-.conteiner {
+.container {
   padding-right: 15px;
   padding-left: 15px;
 }
 
 @media screen and (min-width: 480px) {
-  .conteiner {
+  .container {
     width: 480px;
     margin: 0 auto;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .conteiner {
+  .container {
     width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .conteiner {
+  .container {
     width: 1200px;
   }
 }
@@ -317,11 +317,10 @@ body {
 
 .modal {
   position: absolute;
-  top: 50%;
+  top: 15px;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  width: 528px;
-  height: 581px;
+  transform: translateX(-50%) scale(1);
+  width: 96vw;
   transition: transform 250ms var(--function-transition);
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -331,6 +330,21 @@ body {
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.1);
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 .close-btn {
@@ -425,10 +439,12 @@ body {
 
 .modal-form-checkbox-label {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin-bottom: var(--set-gap);
-  line-height: 1.71;
+  font-size: 10px;
+  line-height: 1.167;
   text-align: center;
   color: var(--secondary-text-color);
 }
@@ -479,11 +495,141 @@ body {
   background-color: var(--button-color);
 }
 
+.mobile-menu {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 500ms var(--function-transition), visibility 500ms var(--function-transition);
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+.container-mobile {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 40px;
+  height: 100%;
+  width: 100%;
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-btn {
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border: transparent;
+  cursor: pointer;
+}
+
+.mobile-menu-list__item:not(:last-child),
+.mobile-contact-list__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu-list__link {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var --text-color;
+}
+
+.mobile-list__link--active {
+  color: var(--accent-color);
+}
+
+.mobile-contact-list {
+  margin-top: auto;
+}
+
+.mobile-contact-list__link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.tel {
+  font-size: 8vw;
+  line-height: 40px;
+  color: #2196f3;
+}
+
+.mail {
+  font-size: 24px;
+  line-height: 28px;
+  color: #757575;
+}
+
+.mobile-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 64px;
+}
+
+.mobile-social-list__item:not(:last-child):after {
+  content: '';
+  width: 22px;
+  height: 0px;
+  margin-right: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+}
+
+.mobile-social-list__link {
+  padding-right: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+
+.burger-btn {
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+}
+
+.burger-btn:hover, .burger-btn:focus {
+  fill: var(--accent-color);
+}
+
+@media screen and (min-width: 767px) {
+  .burger-btn {
+    display: none;
+  }
+}
+
 .header {
   border-bottom: 1px solid #ececec;
 }
 
-.header__conteiner,
+.header__container,
 .navigation {
   display: flex;
   align-items: center;
@@ -686,19 +832,19 @@ body {
 }
 
 @media screen and (min-width: 480px) {
-  .hero .conteiner {
+  .hero .container {
     max-width: 373px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .hero .conteiner {
+  .hero .container {
     max-width: 373px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .hero .conteiner {
+  .hero .container {
     max-width: 696px;
   }
 }

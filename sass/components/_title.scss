@@ -1,0 +1,13 @@
+.title {
+  @media screen and (max-width: 1199px) {
+    @include font($fs: 28px, $fw: 700, $lh: 33px);
+    margin-bottom: var(--set-gap);
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font($fs: 36px, $fw: 700, $lh: 42px);
+    margin-bottom: 50px;
+    text-align: center;
+  }
+}

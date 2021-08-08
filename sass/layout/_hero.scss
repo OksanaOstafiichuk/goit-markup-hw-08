@@ -1,0 +1,99 @@
+.hero {
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../../images/hero/hero-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  max-width: 480px;
+  padding: 118px 0;
+  margin: 0 auto;
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../../images/hero/hero-mobile@2x.jpg');
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/hero/hero-tablet.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../../images/hero/hero-tablet@2x.jpg');
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    padding: 200px 0;
+
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/hero/hero-desktop.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../../images/hero/hero-desktop@2x.jpg');
+    }
+  }
+
+  background-color: var(--accent-background);
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  & .conteiner {
+    @media screen and (min-width: 480px) {
+      max-width: 373px;
+    }
+    @media screen and (min-width: 768px) {
+      max-width: 373px;
+    }
+    @media screen and (min-width: 1200px) {
+      max-width: 696px;
+    }
+  }
+}
+
+.hero__title {
+  margin-bottom: var(--set-gap);
+
+  text-transform: uppercase;
+  color: var(--accessary-color);
+
+  @media screen and (min-width: 480px) {
+    @include font($fs: 26px, $fw: 900, $lh: 42px);
+  }
+
+  @media screen and (min-width: 768px) {
+    @include font($fs: 26px, $fw: 900, $lh: 42px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font($fs: 44px, $fw: 900, $lh: 60px);
+  }
+}
+
+.hero__btn {
+  @include font($fs: 16px, $fw: 700, $lh: 30px);
+  padding: 10px 32px;
+
+  font-family: var(--main-font);
+  color: var(--accessary-color);
+
+  background-color: var(--accent-color);
+  box-shadow: var(--box-shadow-main);
+  transition: background-color 250ms var(--function-transition);
+
+  &:hover,
+  &:focus {
+    background-color: var(--button-color);
+  }
+}

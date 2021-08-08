@@ -1,0 +1,26 @@
+.logo {
+  font-family: var(--secondary-font);
+  color: var(--text-color);
+
+  &--color {
+    color: var(--accent-color);
+  }
+
+  @media screen and (min-width: 480px) {
+    @include font($fs: 24px, $fw: 700, $lh: 28px);
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 16px 0px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+    margin-right: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font($fs: 26px, $fw: 700, $lh: 31px);
+    margin-right: 93px;
+  }
+}

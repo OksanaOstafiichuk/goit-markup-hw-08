@@ -1,12 +1,10 @@
 .feature-list {
-  @include flex-list;
+  @media screen and (min-width: 768px) {
+    @include flex-list;
+  }
 }
 
 .feature-list__item {
-  @media screen and (min-width: 480px) {
-    @include flex-item(calc(100% / 1 - var(--set-gap)));
-  }
-
   @media screen and (min-width: 768px) {
     @include flex-item(calc(100% / 2 - var(--set-gap)));
   }

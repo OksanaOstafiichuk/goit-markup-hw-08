@@ -1,11 +1,14 @@
 .hero {
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../../images/hero/hero-mobile.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: {
+    image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/hero/hero-mobile.jpg);
+    repeat: no-repeat;
+    position: center;
+    size: cover;
+    color: var(--accent-background);
+  }
 
-  max-width: 480px;
+  max-width: 1600px;
   padding: 118px 0;
   margin: 0 auto;
 
@@ -13,12 +16,11 @@
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url('../../images/hero/hero-mobile@2x.jpg');
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../../images/hero/hero-mobile@2x.jpg');
   }
 
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
-
+  @media screen and (min-width: 480.98px) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../../images/hero/hero-tablet.jpg);
 
@@ -26,12 +28,12 @@
       (-webkit-min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url('../../images/hero/hero-tablet@2x.jpg');
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../../images/hero/hero-tablet@2x.jpg');
     }
   }
 
-  @media screen and (min-width: 1200px) {
-    max-width: 1600px;
+  @media screen and (min-width: 768.98px) {
     padding: 200px 0;
 
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -41,21 +43,19 @@
       (-webkit-min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url('../../images/hero/hero-desktop@2x.jpg');
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../../images/hero/hero-desktop@2x.jpg');
     }
   }
 
-  background-color: var(--accent-background);
   text-align: center;
   letter-spacing: 0.06em;
 
   & .container {
     @media screen and (min-width: 480px) {
-      max-width: 373px;
+      max-width: 360px;
     }
-    @media screen and (min-width: 768px) {
-      max-width: 373px;
-    }
+
     @media screen and (min-width: 1200px) {
       max-width: 696px;
     }

@@ -18,12 +18,12 @@
   letter-spacing: 0.01em;
 
   color: var(--secondary-text-color);
+}
 
-  &-element {
-    position: relative;
-    display: block;
-    margin-top: 4px;
-  }
+.modal-form-element {
+  position: relative;
+  display: block;
+  margin-top: 4px;
 }
 
 .modal-form-icon {
@@ -81,10 +81,16 @@
   justify-content: center;
   margin-bottom: var(--set-gap);
 
-  font-size: 10px;
-  line-height: 1.167;
+  @include font($fs: 10px, $fw: 400, $lh: 12px);
 
-  // line-height: 1.71;
+  @media screen and (min-width: 480px) {
+    @include font($fs: 11px, $fw: 400, $lh: 14px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font($fs: 14px, $fw: 400, $lh: 24px);
+  }
+
   text-align: center;
   color: var(--secondary-text-color);
 
@@ -122,9 +128,8 @@
 }
 
 .modal-form-btn {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
+  @include font($fs: 16px, $fw: 700, $lh: 30px);
+
   margin: 0 auto;
   padding: 10px 56px;
   letter-spacing: 0.06em;

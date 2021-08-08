@@ -1,14 +1,12 @@
 .gallery-list {
-  @include flex-list;
+  @media screen and (min-width: 768px) {
+    @include flex-list;
+  }
 }
 
 .gallery-list-item {
   display: flex;
   flex-direction: column;
-
-  @media screen and (min-width: 480px) {
-    @include flex-item(calc(100% / 1 - var(--set-gap)));
-  }
 
   @media screen and (min-width: 768px) {
     @include flex-item(calc(100% / 2 - var(--set-gap)));

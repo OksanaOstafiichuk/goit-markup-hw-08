@@ -53,10 +53,8 @@
 }
 
 .mobile-menu-list__link {
-  font-family: Roboto;
   @include font($fs: 40px, $fw: 500, $lh: 47px);
   letter-spacing: 0.02em;
-
   color: var (--text-color);
 }
 
@@ -69,19 +67,18 @@
 }
 
 .mobile-contact-list__link {
-  font-family: Roboto;
   letter-spacing: 0.02em;
 }
 
 .tel {
-  @include font($fs: 8vw, $fw: 500, $lh: 40px);
-
+  font-size: 8vw;
+  font-weight: 500px;
+  line-height: 40px;
   color: var(--accent-color);
 }
 
 .mail {
   @include font($fs: 24px, $fw: 500, $lh: 28px);
-
   color: var(--secondary-text-color);
 }
 
@@ -104,10 +101,7 @@
 .mobile-social-list__link {
   padding-right: 10px;
 
-  font-family: Roboto;
   @include font($fs: 18px, $fw: 500, $lh: 22px);
-
   letter-spacing: 0.02em;
-
   color: var(--accent-color);
 }

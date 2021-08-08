@@ -3,7 +3,9 @@
 }
 
 .team-list {
-  @include flex-list;
+  @media screen and (min-width: 768px) {
+    @include flex-list;
+  }
 }
 
 .team-list-item {
@@ -11,16 +13,18 @@
   box-shadow: var(--box-shadow-card);
   border-radius: 0px 0px 4px 4px;
 
-  @media screen and (min-width: 480px) {
-    @include flex-item(calc(100% / 1 - var(--set-gap)));
-  }
-
   @media screen and (min-width: 768px) {
     @include flex-item(calc(100% / 2 - var(--set-gap)));
   }
 
   @media screen and (min-width: 1200px) {
     @include flex-item;
+  }
+}
+
+.team-list-item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
   }
 }
 

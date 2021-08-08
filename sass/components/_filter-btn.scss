@@ -10,10 +10,10 @@
     justify-content: center;
     margin-bottom: 50px;
   }
+}
 
-  &-item:not(:last-child) {
-    margin-right: 8px;
-  }
+.filter-list-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .filter-list-item {
@@ -26,7 +26,6 @@
   @media screen and (min-width: 480px) {
     @include font($fs: 16px, $fw: 500, $lh: 26px);
   }
-  // @include font($fw: 500, $lh: 26px);
   padding: 6px 22px;
 
   background-color: var(--secondary-background);
@@ -34,9 +33,11 @@
   text-align: center;
   color: var(--text-color);
 
-  transition-property: color, background-color, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: var(--function-transition);
+  transition: {
+    property: color, background-color, box-shadow;
+    duration: 250ms;
+    timing-function: var(--function-transition);
+  }
 
   &--active,
   &:focus,

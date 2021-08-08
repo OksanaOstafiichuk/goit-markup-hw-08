@@ -18,7 +18,7 @@
 <body>
 
     <header class="header">
-        <div class="conteiner header__conteiner">
+        <div class="container header__container">
             <nav class="navigation">
                 <a href="./index.html" lang="en" class="logo link"><span class="logo--color">Web</span>Studio</a>
                 <ul class="menu list">
@@ -43,6 +43,11 @@
                     +38 096 111 11 11</a>
                 </li>
             </ul>
+            <button type="button" class="burger-btn" data-menu-open>
+                <svg class="burger-btn__icon" width="24" height="16">
+                    <use href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
         </div>
     </header>
 
@@ -50,7 +55,7 @@
 
         <!--HERO-->
         <section class="hero">
-            <div class="conteiner">
+            <div class="container">
                 <h1 class="hero__title">
                         Эффективные решения для вашего бизнеса
                 </h1>
@@ -60,7 +65,7 @@
 
         <!--FEATURE-->
         <section class="feature section">
-            <div class="conteiner">
+            <div class="container">
                 <h2 hidden>Особенности</h2>
                 <ul class="feature-list list">
                     <li class="feature-list__item">
@@ -105,7 +110,7 @@
 
         <!--PROJECT-->
         <section class="project section">
-            <div class="conteiner">
+            <div class="container">
                 <h2 class="title">Чем мы занимаемся</h2>
                 <ul class="project-list list">
                     <li class="project-list__item">
@@ -153,16 +158,16 @@
 
         <!--TEAM-->
         <section class="team-section section">
-            <div class="conteiner">
+            <div class="container">
                 <h2 class="title">Наша команда</h2>
                 <ul class="list team-list">
                     <li class="team-list-item">
                         <picture>
-                            <source media="(min-width: 480px)"
+                            <source media="(min-width: 280px)"
                                 srcset="./images/team/team1-mobile.webp 1x, ./images/team/team1-mobile@2x.webp 2x" 
                                 type="image/webp">
                             
-                            <source media="(min-width: 480px)"
+                            <source media="(min-width: 280px)"
                                 srcset="./images/team/team1-mobile.jpg 1x, ./images/team/team1-mobile@2x.jpg 2x">
 
                             <source media="(min-width: 768px)"
@@ -218,10 +223,10 @@
                     </li>
                     <li class="team-list-item">
                         <picture>
-                            <source media="(min-width: 480px)" srcset="./images/team/team2-mobile.webp 1x, ./images/team/team2-mobile@2x.webp 2x"
+                            <source media="(min-width: 280px)" srcset="./images/team/team2-mobile.webp 1x, ./images/team/team2-mobile@2x.webp 2x"
                                 type="image/webp">
                             
-                            <source media="(min-width: 480px)" srcset="./images/team/team2-mobile.jpg 1x, ./images/team/team2-mobile@2x.jpg 2x">
+                            <source media="(min-width: 280px)" srcset="./images/team/team2-mobile.jpg 1x, ./images/team/team2-mobile@2x.jpg 2x">
                             
                             <source media="(min-width: 768px)" srcset="./images/team/team2-tablet.webp 1x, ./images/team/team2-tablet@2x.webp 2x"
                                 type="image/webp">
@@ -272,10 +277,10 @@
                     </li>
                     <li class="team-list-item">
                         <picture>
-                            <source media="(min-width: 480px)" srcset="./images/team/team3-mobile.webp 1x, ./images/team/team3-mobile@2x.webp 2x"
+                            <source media="(min-width: 280px)" srcset="./images/team/team3-mobile.webp 1x, ./images/team/team3-mobile@2x.webp 2x"
                                 type="image/webp">
                             
-                            <source media="(min-width: 480px)" srcset="./images/team/team3-mobile.jpg 1x, ./images/team/team3-mobile@2x.jpg 2x">
+                            <source media="(min-width: 280px)" srcset="./images/team/team3-mobile.jpg 1x, ./images/team/team3-mobile@2x.jpg 2x">
                             
                             <source media="(min-width: 768px)" srcset="./images/team/team3-tablet.webp 1x, ./images/team/team3-tablet@2x.webp 2x"
                                 type="image/webp">
@@ -326,10 +331,10 @@
                     </li>
                     <li class="team-list-item">
                         <picture>
-                            <source media="(min-width: 480px)" srcset="./images/team/team4-mobile.webp 1x, ./images/team/team4-mobile@2x.webp 2x"
+                            <source media="(min-width: 280px)" srcset="./images/team/team4-mobile.webp 1x, ./images/team/team4-mobile@2x.webp 2x"
                                 type="image/webp">
                             
-                            <source media="(min-width: 480px)" srcset="./images/team/team4-mobile.jpg 1x, ./images/team/team4-mobile@2x.jpg 2x">
+                            <source media="(min-width: 280px)" srcset="./images/team/team4-mobile.jpg 1x, ./images/team/team4-mobile@2x.jpg 2x">
                             
                             <source media="(min-width: 768px)" srcset="./images/team/team4-tablet.webp 1x, ./images/team/team4-tablet@2x.webp 2x"
                                 type="image/webp">
@@ -384,7 +389,7 @@
 
         <!-- CLIENTS -->
         <section class="section">
-            <div class="conteiner">
+            <div class="container">
                 <h2 class="title">Постоянные клиенты</h2>
                 <ul class="client-list">
                     <li class="client-list__item">
@@ -436,7 +441,7 @@
     </main>
 
     <footer class="footer">
-        <div class="conteiner">
+        <div class="container">
             <div class="footer-content">
                 <div class="address">
                     <a href="./index.html" lang="en" class="logo link logo-footer"><span class="logo--color">Web</span>Studio</a>
@@ -504,7 +509,7 @@
     </footer>
 
     <!-- MODAL -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="close-btn" data-modal-close>
                 <svg class="close-black" width="18" height="18">
@@ -548,8 +553,54 @@
                 <button type="submit" class="modal-form-btn button">Отправить</button>
             </form>
         </div>
-    </div> -->
+    </div>
     
-    <!-- <script src="./js/modal.js"></script> -->
+    <!-- MOBILE-MENU -->
+        <div class="mobile-menu" data-menu>
+            <div class="container-mobile">
+                <button type="button" class="close-btn mobile-btn" data-menu-close>
+                    <svg class="close-black" width="18" height="18">
+                        <use href="./images/icons.svg#icon-close-black"></use>
+                    </svg>
+                </button>
+                <ul class="mobile-menu-list">
+                    <li class="mobile-menu-list__item">
+                        <a href="./index.html" class="mobile-menu-list__link mobile-list__link--active link">Студия</a>
+                    </li>
+                    <li class="mobile-menu-list__item">
+                        <a href="./portfolio.html" class="mobile-menu-list__link link">Портфолио</a>
+                    </li>
+                    <li class="mobile-menu-list__item">
+                        <a href="" class="mobile-menu-list__link link">Контакты</a>
+                    </li>
+                </ul>
+                <ul class="mobile-contact-list">
+                    <li class="mobile-contact-list__item">
+                        <a href="tel:+380961111111" class="mobile-contact-list__link tel link">+38 096 111 11 11</a>
+                    </li>
+                    <li class="mobile-contact-list__item">
+                        <a href="mailto:info@devstudio.com" class="mobile-contact-list__link mail link">info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="mobile-social-list">
+                    <li class="mobile-social-list__item">
+                        <a href="" class="mobile-social-list__link link">Instagram</a>
+                    </li>
+                    <li class="mobile-social-list__item">
+                        <a href="" class="mobile-social-list__link link">Twitter</a>
+                    </li>
+                    <li class="mobile-social-list__item">
+                        <a href="" class="mobile-social-list__link link">Facebook</a>
+                    </li>
+                    <li class="mobile-social-list__item">
+                        <a href="" class="mobile-social-list__link link">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <!-- </div> -->
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 </html>

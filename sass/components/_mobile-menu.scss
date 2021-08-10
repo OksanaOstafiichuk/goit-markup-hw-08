@@ -71,9 +71,10 @@
 }
 
 .tel {
-  font-size: 8vw;
-  font-weight: 500px;
-  line-height: 40px;
+  @media screen and (max-width: 479px) {
+    font-size: 8vw;
+  }
+  @include font($fs: 34px, $fw: 500, $lh: 40px);
   color: var(--accent-color);
 }
 

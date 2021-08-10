@@ -34,8 +34,6 @@
   }
 
   @media screen and (min-width: 768.98px) {
-    padding: 200px 0;
-
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../../images/hero/hero-desktop.jpg);
 
@@ -46,6 +44,10 @@
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url('../../images/hero/hero-desktop@2x.jpg');
     }
+
+    @media screen and (min-width: 1200px) {
+      padding: 200px 0;
+    }
   }
 
   text-align: center;
@@ -53,7 +55,7 @@
 
   & .container {
     @media screen and (min-width: 480px) {
-      max-width: 360px;
+      max-width: 373px;
     }
 
     @media screen and (min-width: 1200px) {
@@ -68,7 +70,7 @@
   text-transform: uppercase;
   color: var(--accessary-color);
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 320px) {
     @include font($fs: 26px, $fw: 900, $lh: 42px);
   }
 

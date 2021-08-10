@@ -6,7 +6,7 @@
     color: var(--accent-color);
   }
 
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 1199px) {
     @include font($fs: 24px, $fw: 700, $lh: 28px);
   }
 

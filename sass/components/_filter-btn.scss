@@ -23,7 +23,7 @@
 }
 
 .filter-btn {
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 320px) {
     @include font($fs: 16px, $fw: 500, $lh: 26px);
   }
   padding: 6px 22px;
